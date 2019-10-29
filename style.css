@@ -1050,13 +1050,13 @@ a:focus {
 }
 
 body.page .main-navigation {
-  display: inline-block;
-  margin-left: 3rem;
-  position: absolute;
+  padding-left: 3rem;
+  position: relative;
+  flex: 1 1 0;
 }
 
 .main-navigation > div {
-  display: inline;
+  display: inline-block;
 }
 
 .main-navigation button {
@@ -1089,17 +1089,36 @@ body.page .main-navigation {
   transform: scale(0.99);
 }
 
+.main-navigation, .menu-main-container {
+  height: 100%;
+}
+
+
 .main-navigation .main-menu {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 .main-navigation .main-menu > li {
   color: ##63616b;
-  display: inline;
-  position: relative;
-  margin-left: 1rem;
+  list-style-type: none;
+  padding: 0.2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-navigation .main-menu {
+    flex-direction: row;
+  }
+
+  .main-navigation .main-menu > li {
+    display: inline;
+    position: relative;
+    margin-left: 1rem;
+  }
 }
 
 .main-navigation .main-menu > li > a {
@@ -2002,7 +2021,6 @@ body.page .main-navigation {
 --------------------------------------------------------------*/
 .site-header {
   background-color: #efeff2;
-  height: 64px;
 }
 
 .site-header.featured-image {
@@ -2019,6 +2037,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
+    height: 64px;
   }
   .site-header.featured-image {
     min-height: 100vh;
@@ -2034,26 +2053,28 @@ body.page .main-navigation {
   color: #767676;
   position: relative;
   height:100%;
+  display: flex;
 }
 
 @media only screen and (min-width: 768px) {
   .site-branding {
-    margin: 0 calc(10% + 60px);
+    margin-left: calc(10% + 60px);
   }
 }
 
 .site-logo {
   position: relative;
   z-index: 999;
-  margin-bottom: calc(.66 * 1rem);
+  height: 100%;
+  flex: 1 1 0;
 }
 
 @media only screen and (min-width: 768px) {
   .site-logo {
     margin-bottom: 0;
     z-index: 999;
-    height: 100%;
     display: inline-block;
+    flex: 0 0 200px;
   }
 }
 
