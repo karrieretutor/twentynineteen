@@ -86,9 +86,9 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 			'custom-logo',
 			array(
 				'height'      => 190,
-				'width'       => 190,
-				'flex-width'  => false,
-				'flex-height' => false,
+				'width'       => 300,
+				'flex-width'  => true,
+				'flex-height' => true,
 			)
 		);
 
