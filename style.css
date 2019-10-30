@@ -3497,7 +3497,7 @@ a.a2b-button {
 }
 
 .entry .wp-block-table td {
-  white-space: nowrap;
+  word-break: keep-all;
 }
 
 @media only screen and (min-width: 768px) {
