@@ -412,8 +412,8 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #111;
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  color: #63616b;
+  font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.8;
@@ -427,7 +427,7 @@ select,
 optgroup,
 textarea {
   color: #111;
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Arial", sans-serif;
   font-weight: 400;
   line-height: 1.8;
   text-rendering: optimizeLegibility;
@@ -460,7 +460,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Arial Bold", "Arial", sans-serif;
 }
 
 .main-navigation,
@@ -488,7 +488,7 @@ h6 {
 }
 
 .page-title {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Arial", sans-serif;
 }
 
 .site-branding,
@@ -622,7 +622,8 @@ i {
 blockquote cite {
   font-size: 0.71111em;
   font-style: normal;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Arial", sans-serif;
+
 }
 
 pre {
