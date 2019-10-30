@@ -531,7 +531,6 @@ h2 {
   .error-404 .page-title,
   .has-larger-font-size,
   h2 {
-    font-size: 2.25em;
   }
 }
 
@@ -2038,7 +2037,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    height: 64px;
+    height: 90px;
   }
   .site-header.featured-image {
     min-height: 100vh;
@@ -2068,6 +2067,7 @@ body.page .main-navigation {
   z-index: 999;
   height: 100%;
   flex: 1 1 0;
+  padding: 8px;
 }
 
 @media only screen and (min-width: 768px) {
