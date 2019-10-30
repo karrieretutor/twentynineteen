@@ -406,7 +406,7 @@ template {
 
 /* Typography */
 html {
-  font-size: 22px;
+  font-size: 16px;
 }
 
 body {
@@ -2067,7 +2067,7 @@ body.page .main-navigation {
   z-index: 999;
   height: 100%;
   flex: 1 1 0;
-  padding: 8px;
+  padding: 16px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3490,11 +3490,26 @@ a.a2b-button {
   padding: 1rem;
 }
 
+.entry .wp-block-table {
+  margin-left: 1rem;
+  width:auto;
+  font-size: 0.8rem;
+}
+
+.entry .wp-block-table td {
+  white-space: nowrap;
+}
+
 @media only screen and (min-width: 768px) {
   .entry .entry-content > *,
   .entry .entry-summary > * {
     padding-left: calc(10% + 60px);
     padding-right: 60px;
+  }
+
+  .entry .wp-block-table {
+    margin-left: calc(10% + 60px);
+    margin-right: 60px;
   }
 }
 
@@ -3502,6 +3517,9 @@ a.a2b-button {
   .entry .entry-content > *,
   .entry .entry-summary > * {
     padding-right: 40%;
+  }
+  .entry .wp-block-table {
+    margin-right: 40%;
   }
 }
 
