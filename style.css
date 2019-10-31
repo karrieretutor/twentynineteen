@@ -3485,7 +3485,7 @@ a.a2b-button {
 
 .entry .entry-content > *,
 .entry .entry-summary > * {
-  margin: 32px 0;
+  margin: 8px 0;
   max-width: 100%;
   padding: 1rem;
 }
