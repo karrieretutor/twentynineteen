@@ -32,10 +32,7 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 		 * If you're building a theme based on Twenty Nineteen, use a find and replace
 		 * to change 'twentynineteen' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'twentynineteen', get_template_directory() . '/languages' );
-
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		load_theme_textdomain( 'twentynineteen-light', get_template_directory() . '/languages' );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -45,20 +42,10 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 		 */
 		add_theme_support( 'title-tag' );
 
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
-		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 1568, 9999 );
-
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
 				'menu-1' => __( 'Primary', 'twentynineteen' ),
-				'footer' => __( 'Footer Menu', 'twentynineteen' ),
-				'social' => __( 'Social Links Menu', 'twentynineteen' ),
 			)
 		);
 
@@ -274,12 +261,6 @@ add_action( 'wp_head', 'twentynineteen_colors_css_wrap' );
  * SVG Icons class.
  */
 require get_template_directory() . '/classes/class-twentynineteen-svg-icons.php';
-
-/**
- * Custom Comment Walker template.
- */
-require get_template_directory() . '/classes/class-twentynineteen-walker-comment.php';
-
 /**
  * Enhance the theme by hooking into WordPress.
  */
