@@ -1053,10 +1053,12 @@ body.page .main-navigation {
   padding-left: 3rem;
   position: relative;
   flex: 1 1 0;
+  align-self: stretch;
 }
 
 .main-navigation > div {
   display: inline-block;
+  height: 100%;
 }
 
 .main-navigation button {
@@ -1089,11 +1091,6 @@ body.page .main-navigation {
   transform: scale(0.99);
 }
 
-.main-navigation, .menu-main-container {
-  height: 100%;
-}
-
-
 .main-navigation .main-menu {
   display: flex;
   flex-direction: column;
@@ -1107,6 +1104,8 @@ body.page .main-navigation {
   color: ##63616b;
   list-style-type: none;
   padding: 0.2rem;
+  display: flex;
+  align-items: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1115,7 +1114,6 @@ body.page .main-navigation {
   }
 
   .main-navigation .main-menu > li {
-    display: inline;
     position: relative;
     margin-left: 1rem;
   }
