@@ -92,7 +92,7 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		// Enqueue editor styles.
-		add_editor_style( 'style-editor.css' );
+		add_editor_style( 'assets/css/style-editor.css' );
 
 		// Add custom editor font sizes.
 		add_theme_support(
@@ -188,10 +188,10 @@ function twentynineteen_scripts() {
 
 	if ( has_nav_menu( 'menu-1' ) ) {
 		//wp_enqueue_script( 'twentynineteen-priority-menu', get_theme_file_uri( '/js/priority-menu.js' ), array(), '1.1', true );
-		wp_enqueue_script( 'twentynineteen-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '1.1', true );
+		wp_enqueue_script( 'twentynineteen-touch-navigation', get_theme_file_uri( '/assets/js/touch-keyboard-navigation.js' ), array(), '1.1', true );
 	}
 
-	wp_enqueue_style( 'twentynineteen-print-style', get_template_directory_uri() . '/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+	wp_enqueue_style( 'twentynineteen-print-style', get_template_directory_uri() . 'assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -222,11 +222,11 @@ add_action( 'wp_print_footer_scripts', 'twentynineteen_skip_link_focus_fix' );
  */
 function twentynineteen_editor_customizer_styles() {
 
-	wp_enqueue_style( 'twentynineteen-editor-customizer-styles', get_theme_file_uri( '/style-editor-customizer.css' ), false, '1.1', 'all' );
+	wp_enqueue_style( 'twentynineteen-editor-customizer-styles', get_theme_file_uri( 'assets/css/style-editor-customizer.css' ), false, '1.1', 'all' );
 
 	if ( 'custom' === get_theme_mod( 'primary_color' ) ) {
 		// Include color patterns.
-		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
+		require_once get_parent_theme_file_path( '/includes/color-patterns.php' );
 		wp_add_inline_style( 'twentynineteen-editor-customizer-styles', twentynineteen_custom_colors_css() );
 	}
 }
@@ -242,7 +242,7 @@ function twentynineteen_colors_css_wrap() {
 		return;
 	}
 
-	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
+	require_once get_parent_theme_file_path( '/includes/color-patterns.php' );
 
 	$primary_color = 199;
 	if ( 'default' !== get_theme_mod( 'primary_color', 'default' ) ) {
@@ -260,23 +260,23 @@ add_action( 'wp_head', 'twentynineteen_colors_css_wrap' );
 /**
  * SVG Icons class.
  */
-require get_template_directory() . '/classes/class-twentynineteen-svg-icons.php';
+require get_template_directory() . '/includes/class-twentynineteen-svg-icons.php';
 /**
  * Enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+require get_template_directory() . '/includes/template-functions.php';
 
 /**
  * SVG Icons related functions.
  */
-require get_template_directory() . '/inc/icon-functions.php';
+require get_template_directory() . '/includes/icon-functions.php';
 
 /**
  * Custom template tags for the theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/includes/template-tags.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/includes/customizer.php';
