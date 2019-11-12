@@ -3400,12 +3400,12 @@ body.page-id-72 .entry-content p strong { color: #74bdc3; }
 	.site-branding { display: table; width: 100%; }
   .site-branding .site-logo { display: table; width: 100%; flex: none !important; height: auto; text-align: center; padding: 1rem; }
   .site-branding .site-logo a { width: 100%; }
-  .site-branding .site-logo a img { max-width: 180px; }
+  .site-branding .site-logo a img { max-width: 180px; height: auto !important; }
 
   #site-navigation { display: table; width: 100%; padding: 0 1rem; }
   #site-navigation > div, #site-navigation ul { width: 100%; }
   .main-navigation .main-menu { display: block; }
-  #site-navigation ul li { width: auto !important; display: table; float: left; }
-  .main-navigation .main-menu > li > a { margin: 0; padding: 0.5rem 1rem; text-align: center;}
+  #site-navigation ul li { width: auto !important; float: left; text-align: center; }
+  .main-navigation .main-menu > li > a { margin: 0; padding: 0.5rem 1rem; text-align: center; }
 
 }
