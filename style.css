@@ -3395,3 +3395,17 @@ body.page-id-72 .entry-content p { margin: 0 !important; padding-top: 0.5rem !im
 body.page-id-72 .entry-content ul { margin-top: 0 !important; padding-top: 0 !important; }
 body.page-id-72 .entry-content ul li { margin-left: 40px; }
 body.page-id-72 .entry-content p strong { color: #74bdc3; }
+
+@media only screen and (max-width: 767.98px) {
+	.site-branding { display: table; width: 100%; }
+  .site-branding .site-logo { display: table; width: 100%; flex: none !important; height: auto; text-align: center; padding: 1rem; }
+  .site-branding .site-logo a { width: 100%; }
+  .site-branding .site-logo a img { max-width: 180px; }
+
+  #site-navigation { display: table; width: 100%; padding: 0 1rem; }
+  #site-navigation > div, #site-navigation ul { width: 100%; }
+  .main-navigation .main-menu { display: block; }
+  #site-navigation ul li { width: auto !important; display: table; float: left; }
+  .main-navigation .main-menu > li > a { margin: 0; padding: 0.5rem 1rem; text-align: center;}
+
+}
